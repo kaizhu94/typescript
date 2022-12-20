@@ -15,4 +15,4 @@ enum Job {
 const job:Job = Job.WebDev;
 
 const phone: any = "Pixel";
-const tablet: never = 3;
+const tablet: any = 3;
