@@ -16,3 +16,16 @@ const job:Job = Job.WebDev;
 
 const phone: any = "Pixel";
 const tablet: any = 3;
+
+
+
+// Functions in Typescript
+
+//taking in a string type and return is also a string
+const sayHello = (word: string): string=> {
+    console.log(word);
+    return word;
+}
+
+sayHello("hi");
+sayHello(3 + "");
