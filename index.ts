@@ -123,3 +123,25 @@ const createContent2 = (contentType: Type2) => {
 
 }
 createContent2(Type2.Video);
+
+
+
+//Classes
+
+class Team {
+    private teamName: string;
+    // readonly private teamName: string; not changeable
+
+    constructor(teamName) {
+        this.teamName = teamName;
+    }
+
+    score(): string {
+        console.log(this.teamName);
+        return 'goal!';
+    }
+}
+
+const redWings = new Team('Red Wings');
+redWings.score;
+// redWings.teamName; worng, this is private, you cant see
