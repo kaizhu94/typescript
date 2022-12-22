@@ -28,4 +28,4 @@ const sayHello = (word: string): string=> {
 }
 
 sayHello("hi");
-sayHello(3 + "");
+sayHello(3 + ""); //make it into string type
