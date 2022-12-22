@@ -143,6 +143,79 @@ var sayWord = function sayWord(word) {
     return word;
 };
 sayWord('Kai', 'Zhu');
+//typescript has default type as first input type, 
+// this is call implicit types
+var newName = 'Kaihua';
+newName = 'Kai';
+//get type from initial declaration
+var newNameTwo = newName;
+// newNameTwo = false;
+//Union Types with |
+var makeMargin = function makeMargin(x) {
+    return "margin: ".concat(x, "px");
+};
+makeMargin(10);
+makeMargin('Kai');
+// makeMargin(false);
+//Null types
+// null type is automatically added to normal types
+var dog;
+var sayName = function sayName(_a) {
+    var name = _a.name,
+        age = _a.age;
+    console.log(name);
+    return name;
+};
+// this works too
+// const sayName = ({ name, age } : Person): Person => {
+//     console.log(name);
+//     return {name, age};
+// } 
+// one param still work
+sayName({
+    name: "Kai"
+});
+// now the order of inputs doesnt matter;
+sayName({
+    age: 29,
+    name: "Kai"
+});
+//Enums
+// this is numeric enum, by default the vaule is a number
+var Type;
+(function (Type) {
+    Type[Type["Video"] = 0] = "Video";
+    Type[Type["BlogPost"] = 1] = "BlogPost";
+    Type[Type["Quiz"] = 2] = "Quiz"; //2
+})(Type || (Type = {}));
+var createContent = function createContent(contentType) {};
+//strings and enumtypes are not the same thing
+// createContent('video');
+createContent(Type.Video);
+console.log(Type.Quiz);
+var Type2;
+(function (Type2) {
+    Type2["Video"] = "VIDEO";
+    Type2["BlogPost"] = "BLOGPOST";
+    Type2["Quiz"] = "QUIZ";
+})(Type2 || (Type2 = {}));
+var createContent2 = function createContent2(contentType) {};
+createContent2(Type2.Video);
+//Classes
+var Team = /** @class */function () {
+    // readonly private teamName: string; not changeable
+    function Team(teamName) {
+        this.teamName = teamName;
+    }
+    Team.prototype.score = function () {
+        console.log(this.teamName);
+        return 'goal!';
+    };
+    return Team;
+}();
+var redWings = new Team('Red Wings');
+redWings.score;
+// redWings.teamName; worng, this is private, you cant see
 },{}],4:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -172,7 +245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49711' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62442' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
