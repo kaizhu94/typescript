@@ -93,3 +93,33 @@ sayName({
     age: 29,
     name: "Kai"
 });
+
+
+//Enums
+// this is numeric enum, by default the vaule is a number
+enum Type {
+    Video, //0
+    BlogPost, //1
+    Quiz //2
+}
+
+const createContent = (contentType: Type) => {
+
+}
+
+//strings and enumtypes are not the same thing
+// createContent('video');
+createContent(Type.Video);
+
+console.log(Type.Quiz);
+
+enum Type2{
+    Video = 'VIDEO',
+    BlogPost = 'BLOGPOST', 
+    Quiz = 'QUIZ'
+}
+
+const createContent2 = (contentType: Type2) => {
+
+}
+createContent2(Type2.Video);
