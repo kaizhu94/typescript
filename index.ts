@@ -1,3 +1,6 @@
+import Job, { Person, Type2 } from "./src/interfaces";
+
+
 console.log('hello world');
 
 const isOpen: boolean = false;
@@ -8,10 +11,7 @@ const list: number[] = [0, 1, 2];
 
 const me: [string, number, boolean]= ["Kai", 29, false];
 
-enum Job { 
-    WebDev, 
-    WebDesigner, 
-    PM }
+
 const job:Job = Job.WebDev;
 
 const phone: any = "Pixel";
@@ -69,11 +69,6 @@ let dog: string;
 
 
 //Interface
-
-interface Person {
-    name: string,
-    age?: number // optional param
-}
 const sayName = ({ name, age } : Person): string => {
     console.log(name);
     return name;
@@ -113,11 +108,6 @@ createContent(Type.Video);
 
 console.log(Type.Quiz);
 
-enum Type2{
-    Video = 'VIDEO',
-    BlogPost = 'BLOGPOST', 
-    Quiz = 'QUIZ'
-}
 
 const createContent2 = (contentType: Type2) => {
 
@@ -145,3 +135,8 @@ class Team {
 const redWings = new Team('Red Wings');
 redWings.score;
 // redWings.teamName; worng, this is private, you cant see
+
+
+
+
+

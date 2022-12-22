@@ -103,20 +103,36 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({2:[function(require,module,exports) {
-console.log('hello world');
-var isOpen = false;
-var myName = "Kai";
-var myAge = 29;
-var list = [0, 1, 2];
-var me = ["Kai", 29, false];
+})({8:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Type2 = void 0;
 var Job;
 (function (Job) {
     Job[Job["WebDev"] = 0] = "WebDev";
     Job[Job["WebDesigner"] = 1] = "WebDesigner";
     Job[Job["PM"] = 2] = "PM";
 })(Job || (Job = {}));
-var job = Job.WebDev;
+exports.default = Job;
+var Type2;
+(function (Type2) {
+    Type2["Video"] = "VIDEO";
+    Type2["BlogPost"] = "BLOGPOST";
+    Type2["Quiz"] = "QUIZ";
+})(Type2 = exports.Type2 || (exports.Type2 = {}));
+},{}],2:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var interfaces_1 = require("./src/interfaces");
+console.log('hello world');
+var isOpen = false;
+var myName = "Kai";
+var myAge = 29;
+var list = [0, 1, 2];
+var me = ["Kai", 29, false];
+var job = interfaces_1.default.WebDev;
 var phone = "Pixel";
 var tablet = 3;
 // Functions in Typescript
@@ -160,6 +176,10 @@ makeMargin('Kai');
 //Null types
 // null type is automatically added to normal types
 var dog;
+// dog = undefined;
+// dog = "Lucie";
+// dog = null;
+//Interface
 var sayName = function sayName(_a) {
     var name = _a.name,
         age = _a.age;
@@ -193,14 +213,8 @@ var createContent = function createContent(contentType) {};
 // createContent('video');
 createContent(Type.Video);
 console.log(Type.Quiz);
-var Type2;
-(function (Type2) {
-    Type2["Video"] = "VIDEO";
-    Type2["BlogPost"] = "BLOGPOST";
-    Type2["Quiz"] = "QUIZ";
-})(Type2 || (Type2 = {}));
 var createContent2 = function createContent2(contentType) {};
-createContent2(Type2.Video);
+createContent2(interfaces_1.Type2.Video);
 //Classes
 var Team = /** @class */function () {
     // readonly private teamName: string; not changeable
@@ -216,7 +230,7 @@ var Team = /** @class */function () {
 var redWings = new Team('Red Wings');
 redWings.score;
 // redWings.teamName; worng, this is private, you cant see
-},{}],4:[function(require,module,exports) {
+},{"./src/interfaces":8}],4:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -245,7 +259,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62442' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61590' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
