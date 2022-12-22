@@ -1,4 +1,4 @@
-import Job, { Person, Type2 } from "./src/interfaces";
+import Job, { Person, Type2 } from "./interfaces";
 
 
 console.log('hello world');
