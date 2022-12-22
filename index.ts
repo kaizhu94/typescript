@@ -40,3 +40,29 @@ const sayWord= (word = 'Hello', ...otherStuff: string[]): string => {
 }
 
 sayWord('Kai', 'Zhu');
+
+//typescript has default type as first input type, 
+// this is call implicit types
+let newName: string | number | boolean = 'Kaihua';
+newName = 'Kai';
+
+
+//get type from initial declaration
+let newNameTwo = newName;
+// newNameTwo = false;
+
+//Union Types with |
+const makeMargin = (x: string | number): string => {
+    return `margin: ${x}px`;
+}
+
+makeMargin(10);
+makeMargin('Kai');
+// makeMargin(false);
+
+//Null types
+// null type is automatically added to normal types
+let dog: string = "Sammy";
+// dog = undefined;
+// dog = "Lucie";
+// dog = null;
