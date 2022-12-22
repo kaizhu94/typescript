@@ -121,12 +121,28 @@ var phone = "Pixel";
 var tablet = 3;
 // Functions in Typescript
 //taking in a string type and return is also a string
-var sayHello = function sayHello(word) {
-    console.log(word);
+//? question mark is for optional params
+// const sayHello = (word?: string): string=> {
+//     console.log(word || 'Hello');
+//     return word || 'Hello';
+// }
+// sayHello("hi");
+// sayHello(3 + ""); //make it into string type
+//sayWord()
+//Default params
+//Rest params work as expected
+var sayWord = function sayWord(word) {
+    if (word === void 0) {
+        word = 'Hello';
+    }
+    var otherStuff = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        otherStuff[_i - 1] = arguments[_i];
+    }
+    console.log(otherStuff);
     return word;
 };
-sayHello("hi");
-sayHello(3 + "");
+sayWord('Kai', 'Zhu');
 },{}],4:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -156,7 +172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57278' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49711' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

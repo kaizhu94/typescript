@@ -22,10 +22,21 @@ const tablet: any = 3;
 // Functions in Typescript
 
 //taking in a string type and return is also a string
-const sayHello = (word: string): string=> {
-    console.log(word);
+//? question mark is for optional params
+// const sayHello = (word?: string): string=> {
+//     console.log(word || 'Hello');
+//     return word || 'Hello';
+// }
+
+// sayHello("hi");
+// sayHello(3 + ""); //make it into string type
+
+//sayWord()
+//Default params
+//Rest params work as expected
+const sayWord= (word = 'Hello', ...otherStuff: string[]): string => {
+    console.log(otherStuff);
     return word;
 }
 
-sayHello("hi");
-sayHello(3 + ""); //make it into string type
+sayWord('Kai', 'Zhu');
