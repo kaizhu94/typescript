@@ -62,7 +62,7 @@ makeMargin('Kai');
 
 //Null types
 // null type is automatically added to normal types
-let dog: string = "Sammy";
+let dog: string;
 // dog = undefined;
 // dog = "Lucie";
 // dog = null;
