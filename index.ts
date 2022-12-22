@@ -66,3 +66,30 @@ let dog: string;
 // dog = undefined;
 // dog = "Lucie";
 // dog = null;
+
+
+//Interface
+
+interface Person {
+    name: string,
+    age?: number // optional param
+}
+const sayName = ({ name, age } : Person): string => {
+    console.log(name);
+    return name;
+} 
+// this works too
+// const sayName = ({ name, age } : Person): Person => {
+//     console.log(name);
+//     return {name, age};
+// } 
+
+// one param still work
+sayName({
+    name: "Kai"
+});
+// now the order of inputs doesnt matter;
+sayName({
+    age: 29,
+    name: "Kai"
+});
