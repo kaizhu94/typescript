@@ -138,5 +138,10 @@ redWings.score;
 
 
 
+const outputInput = <T>(arg: T): T => {
+    return arg;
+};
 
+outputInput('hi');
+outputInput(3);
 
