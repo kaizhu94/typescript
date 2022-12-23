@@ -145,3 +145,19 @@ const outputInput = <T>(arg: T): T => {
 outputInput('hi');
 outputInput(3);
 
+
+//Duck Typing
+
+class Dancer implements Person {
+    name: string;
+    age: number;
+}
+
+let ElNino: Person = new Dancer();
+
+const fake = {
+    name: "Kai"
+}
+// this doesnt complaint bc name property satisfy the Proson type
+ElNino = fake;
+
